@@ -28,7 +28,7 @@ const Login = () => {
         // Save the token if needed
         localStorage.setItem('token', res.data.token); // Example: storing in local storage
         dispatch(setAuthUser(res.data)); // Set the user in the Redux store if applicable
-        navigate("/dashboard"); // Redirect to the dashboard or another protected route
+        navigate("/"); // Redirect to the dashboard or another protected route
         toast.success(res.data.message);
       }
     } catch (error) {
